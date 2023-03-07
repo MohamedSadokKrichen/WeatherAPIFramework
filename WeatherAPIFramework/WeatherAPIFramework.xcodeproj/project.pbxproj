@@ -11,6 +11,11 @@
 		3761AB4429B75BAA00C68588 /* WeatherAPIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3761AB3929B75BAA00C68588 /* WeatherAPIFramework.framework */; };
 		3761AB4929B75BAA00C68588 /* WeatherAPIFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AB4829B75BAA00C68588 /* WeatherAPIFrameworkTests.swift */; };
 		3761AB4A29B75BAA00C68588 /* WeatherAPIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 3761AB3C29B75BAA00C68588 /* WeatherAPIFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3761AB5529B7703B00C68588 /* WFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AB5429B7703B00C68588 /* WFRequest.swift */; };
+		3761AB5929B7713A00C68588 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AB5829B7713A00C68588 /* Constants.swift */; };
+		3761AB5C29B7777900C68588 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AB5B29B7777900C68588 /* Weather.swift */; };
+		3761AB5E29B7784200C68588 /* WFEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AB5D29B7784200C68588 /* WFEndPoints.swift */; };
+		3761AB6029B7839100C68588 /* WFService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761AB5F29B7839100C68588 /* WFService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		3761AB3D29B75BAA00C68588 /* WeatherAPIFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = WeatherAPIFramework.docc; sourceTree = "<group>"; };
 		3761AB4329B75BAA00C68588 /* WeatherAPIFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAPIFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3761AB4829B75BAA00C68588 /* WeatherAPIFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIFrameworkTests.swift; sourceTree = "<group>"; };
+		3761AB5429B7703B00C68588 /* WFRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFRequest.swift; sourceTree = "<group>"; };
+		3761AB5829B7713A00C68588 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3761AB5B29B7777900C68588 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		3761AB5D29B7784200C68588 /* WFEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFEndPoints.swift; sourceTree = "<group>"; };
+		3761AB5F29B7839100C68588 /* WFService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,9 @@
 		3761AB3B29B75BAA00C68588 /* WeatherAPIFramework */ = {
 			isa = PBXGroup;
 			children = (
+				3761AB5A29B7776C00C68588 /* Models */,
+				3761AB5729B7712E00C68588 /* Utils */,
+				3761AB5329B7701B00C68588 /* APIClient */,
 				3761AB3C29B75BAA00C68588 /* WeatherAPIFramework.h */,
 				3761AB3D29B75BAA00C68588 /* WeatherAPIFramework.docc */,
 			);
@@ -83,6 +96,32 @@
 				3761AB4829B75BAA00C68588 /* WeatherAPIFrameworkTests.swift */,
 			);
 			path = WeatherAPIFrameworkTests;
+			sourceTree = "<group>";
+		};
+		3761AB5329B7701B00C68588 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				3761AB5429B7703B00C68588 /* WFRequest.swift */,
+				3761AB5D29B7784200C68588 /* WFEndPoints.swift */,
+				3761AB5F29B7839100C68588 /* WFService.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		3761AB5729B7712E00C68588 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3761AB5829B7713A00C68588 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3761AB5A29B7776C00C68588 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3761AB5B29B7777900C68588 /* Weather.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +233,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3761AB5C29B7777900C68588 /* Weather.swift in Sources */,
+				3761AB5E29B7784200C68588 /* WFEndPoints.swift in Sources */,
+				3761AB6029B7839100C68588 /* WFService.swift in Sources */,
+				3761AB5529B7703B00C68588 /* WFRequest.swift in Sources */,
 				3761AB3E29B75BAA00C68588 /* WeatherAPIFramework.docc in Sources */,
+				3761AB5929B7713A00C68588 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -325,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -350,6 +394,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,6 +423,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,6 +442,7 @@
 		3761AB5129B75BAA00C68588 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 53GY2ZG88Y;
@@ -412,6 +459,7 @@
 		3761AB5229B75BAA00C68588 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 53GY2ZG88Y;
