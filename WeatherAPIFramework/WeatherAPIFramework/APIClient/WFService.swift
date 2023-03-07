@@ -9,7 +9,7 @@ import Foundation
 
 final class WFService {
     
-    public let shared = WFService()
+    public static let shared = WFService()
     
     private init() {}
     
@@ -33,8 +33,9 @@ final class WFService {
     /// - Parameters:
     ///   - request: request instance
     ///   - completion: Callback with data or error
-    public func execute(_ request: WFRequest,
-                        completion: @escaping (Result<Weather, Error>) -> Void) {
+    public func execute<T: Codable>(_ request: WFRequest,
+                                    expecting type: T.Type,
+                        completion: @escaping (Result<T, Error>) -> Void) {
         guard let urlrequest = self.request(from: request) else {
             completion(.failure(WFServiceError.faileToCreateRequest))
             return
@@ -47,7 +48,7 @@ final class WFService {
             }
             
             do {
-                let result = try JSONDecoder().decode(Weather.self, from: data)
+                let result = try JSONDecoder().decode(type.self, from: data)
                 completion(.success(result))
             }
             catch {

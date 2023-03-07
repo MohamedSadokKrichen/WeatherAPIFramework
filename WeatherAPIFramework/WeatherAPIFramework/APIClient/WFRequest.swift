@@ -72,3 +72,7 @@ final class WFRequest {
         return nil
     }
 }
+
+extension WFRequest {
+    static let getWeatherInfo = WFRequest(endPoint: .weather)
+}
