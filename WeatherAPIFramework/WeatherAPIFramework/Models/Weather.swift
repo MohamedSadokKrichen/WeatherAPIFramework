@@ -8,37 +8,37 @@
 import Foundation
 
 // MARK: - Weather
-struct Weather: Codable {
-    let coord: Coord?
-    let weather: [WeatherElement]?
-    let base: String?
-    let main: Main?
-    let visibility: Int?
-    let wind: Wind?
-    let clouds: Clouds?
-    let dt: Int?
-    let sys: Sys?
-    let timezone, id: Int?
-    let name: String?
-    let cod: Int?
+public struct Weather: Codable {
+    public let coord: Coord?
+    public let weather: [WeatherElement]?
+    public let base: String?
+    public let main: Main?
+    public let visibility: Int?
+    public let wind: Wind?
+    public let clouds: Clouds?
+    public let dt: Int?
+    public let sys: Sys?
+    public let timezone, id: Int?
+    public let name: String?
+    public let cod: Int?
 }
 
 // MARK: - Clouds
-struct Clouds: Codable {
-    let all: Int?
+public struct Clouds: Codable {
+    public let all: Int?
 }
 
 // MARK: - Coord
-struct Coord: Codable {
-    let lon, lat: Int?
+public struct Coord: Codable {
+    public let lon, lat: Double?
 }
 
 // MARK: - Main
-struct Main: Codable {
-    let temp, feelsLike, tempMin, tempMax: Double?
-    let pressure, humidity, seaLevel, grndLevel: Int?
+public struct Main: Codable {
+    public let temp, feelsLike, tempMin, tempMax: Double?
+    public let pressure, humidity, seaLevel, grndLevel: Int?
 
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case temp
         case feelsLike = "feels_like"
         case tempMin = "temp_min"
@@ -50,21 +50,21 @@ struct Main: Codable {
 }
 
 // MARK: - Sys
-struct Sys: Codable {
-    let type, id: Int?
-    let country: String?
-    let sunrise, sunset: Int?
+public struct Sys: Codable {
+    public let type, id: Int?
+    public let country: String?
+    public let sunrise, sunset: Int?
 }
 
 // MARK: - WeatherElement
-struct WeatherElement: Codable {
-    let id: Int?
-    let main, description, icon: String?
+public struct WeatherElement: Codable {
+    public let id: Int?
+    public let main, description, icon: String?
 }
 
 // MARK: - Wind
-struct Wind: Codable {
-    let speed: Double?
-    let deg: Int?
-    let gust: Double?
+public struct Wind: Codable {
+    public let speed: Double?
+    public let deg: Int?
+    public let gust: Double?
 }
