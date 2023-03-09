@@ -26,7 +26,8 @@ final class WFRequest {
             
             string += argumentString
         }
-        
+        //URL cannot be created when there is a space in the city name
+        string = string.replacingOccurrences(of: " ", with: "%20")
         return string
     }
     
