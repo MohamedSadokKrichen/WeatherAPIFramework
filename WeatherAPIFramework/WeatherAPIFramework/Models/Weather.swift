@@ -20,7 +20,7 @@ public struct Weather: Codable {
     public let sys: Sys?
     public let timezone, id: Int?
     public let name: String?
-    public let cod: Int?
+//    public let cod: Int?
 }
 
 // MARK: - Clouds
